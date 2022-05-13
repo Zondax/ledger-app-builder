@@ -2,12 +2,9 @@
 name: Ledger App Builder Publisher
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - .github/workflows/publish.yml
-      - Dockerfile
+  release:
+    types:
+      - created
 
 jobs:
   push_devnet_to_registry:
